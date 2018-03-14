@@ -1,17 +1,24 @@
-<div class="cans-data" ng-repeat="can in $ctrl.cans">
-  <p>
-    Name: {{can.name}}
-  </p>
-  <p>
-    Serial: {{can.serial}}
-  </p>
-  <p>
-    Size: {{can.size}}
-  </p>
-  <p>
-    Created Date: {{can.createdDate}}
-  </p>
-  <p>
-    Modified Date: {{can.modifiedDate}}
-  </p>
+<div class="landingPage">
+  <div class="logo-box">
+    <img class="starlight-logo" src="https://static.wixstatic.com/media/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png/v1/fill/w_474,h_196,al_c,usm_0.66_1.00_0.01/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png" />
+  </div>
+  <div class="cans-data" ng-repeat="can in $ctrl.cans">
+    <p>
+      Name: {{can.name}}
+    </p>
+    <p>
+      Serial: {{can.serial}}
+    </p>
+    <p>
+      Size: {{can.size}}
+    </p>
+    <p>
+      Created Date: <span class="date"> {{can.createdDate}} </span>
+    </p>
+    <p>
+      Modified Date: <span class="date"> {{can.modifiedDate}} </span>
+    </p>
+
+  </div>
+
 </div>
