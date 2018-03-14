@@ -10,6 +10,7 @@
       $http.get('cans.json')
         .then(results => {
           console.log(results);
+          vm.cans = results.data
         })
     }
 
