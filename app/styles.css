@@ -1,12 +1,24 @@
 .landingPage {
   text-align: center;
   background: #f1f1f1;
+  min-height: 100vh;
+}
+
+p {
+  margin: 3px;
 }
 
 .search-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 1px;
+  z-index: 11;
+  background-color: #e2af73;
+  padding: 10px;
+  opacity: .9;
+  font-family: 'Raleway', sans-serif;
 }
 
 .cans-data {
@@ -45,15 +57,17 @@
 .canInfo {
   display: none;
   left: 25%;
-  margin-top: -25%;
+  margin-top: -30%;
   width: 50%;
   position: absolute;
-  z-index: 9;
+  z-index: 12;
   border-radius: 2px;
+  height: 95vh;
 }
 
 .location-header {
   font-family: 'Raleway', sans-serif;
+  margin: 3px;
 }
 
 .canInfo-body {

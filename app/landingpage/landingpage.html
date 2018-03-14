@@ -1,23 +1,28 @@
 <div class="landingPage">
   <div class="logo-box">
     <img class="starlight-logo" src="https://static.wixstatic.com/media/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png/v1/fill/w_474,h_196,al_c,usm_0.66_1.00_0.01/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png" />
-    <ul class="nav nav-pills search-box">
-      <li role="presentation" class="active">
-        <input type="search" ng-model="search" class="form-control input-sm search-form" placeholder="Search">
-      </li>
-      <div class="form-inline">
-        <label for="sort">  Sort by </label>
-        <select class="form-control" ng-model="sortBy" id="sort">
-          <option disabled selected value="">Choose one</option>
-          <option value="name">Name</option>
-          <option value="serial">Serial</option>
-          <option value="size">Size</option>
-          <option value="createdDate">Created Date</option>
-          <option value="modifiedDate">Modified Date</option>
-        </select>
-      </div>
-    </ul>
   </div>
+
+  <!-- ////// Search and sort functions ////// -->
+  <ul class="nav nav-pills search-box">
+    <li role="presentation" class="active">
+      <input type="search" ng-model="search" class="form-control input-sm search-form" placeholder="Search">
+    </li>
+    <div class="form-inline">
+      <label for="sort">  Sort by </label>
+      <select class="form-control" ng-model="sortBy" id="sort">
+        <option disabled selected value="">Choose one</option>
+        <option value="name">Name</option>
+        <option value="serial">Serial</option>
+        <option value="size">Size</option>
+        <option value="createdDate">Created Date</option>
+        <option value="modifiedDate">Modified Date</option>
+      </select>
+    </div>
+  </ul>
+  <!-- ////// End of search and sort functions ////// -->
+
+  <!-- ////// Can data ////// -->
   <div class="cans-data" ng-repeat="can in $ctrl.cans | orderBy:sortBy | filter:search">
     <p>
       <strong class="can-headers">Name:</strong> {{can.name}}
@@ -36,8 +41,7 @@
     </p>
     <button class="btn location-button" ng-click="$ctrl.getInfo(can)">Get Location</button>
 
-
-
+    <!-- ////// Modal for can location data /////// -->
     <div class="canInfo" ng-class="{show: can.show}">
       <div class="canInfo-body modal-content">
         <div class="modal-header">
@@ -59,9 +63,8 @@
         </div>
       </div>
     </div>
-
+    <!-- ////// End location data modal ////// -->
 
   </div>
-
-
+  <!-- /////// End of can data /////// -->
 </div>
