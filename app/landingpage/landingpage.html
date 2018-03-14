@@ -1,6 +1,6 @@
 <div class="landingPage">
   <div class="logo-box">
-    <img class="starlight-logo" src="https://static.wixstatic.com/media/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png/v1/fill/w_474,h_196,al_c,usm_0.66_1.00_0.01/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png" />
+    <img class="starlight-logo" id="top" src="https://static.wixstatic.com/media/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png/v1/fill/w_474,h_196,al_c,usm_0.66_1.00_0.01/b47bd7_f0a751ba390d408b9b9ed1f202bba7a8.png" />
   </div>
 
   <!-- ////// Search and sort functions ////// -->
@@ -9,7 +9,7 @@
       <input type="search" ng-model="search" class="form-control input-sm search-form" placeholder="Search">
     </li>
     <div class="form-inline">
-      <label for="sort">  Sort by </label>
+      <label for="sort" class="sort-label">  Sort by </label>
       <select class="form-control" ng-model="sortBy" id="sort">
         <option disabled selected value="">Choose one</option>
         <option value="name">Name</option>
@@ -21,6 +21,8 @@
     </div>
   </ul>
   <!-- ////// End of search and sort functions ////// -->
+
+  <button ng-show="$ctrl.dataButton" class="btn get-data-button" ng-click="$ctrl.getData()">Get Can Data</button>
 
   <!-- ////// Can data ////// -->
   <div class="cans-data" ng-repeat="can in $ctrl.cans | orderBy:sortBy | filter:search">
@@ -66,5 +68,8 @@
     <!-- ////// End location data modal ////// -->
 
   </div>
+  <p ng-show="$ctrl.backToTop" class="backToTop" href="#top" du-smooth-scroll>
+    Back To Top
+  </p>
   <!-- /////// End of can data /////// -->
 </div>
