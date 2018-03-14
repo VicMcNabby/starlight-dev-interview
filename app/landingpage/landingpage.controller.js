@@ -14,5 +14,13 @@
         })
     }
 
+    vm.getInfo = function(can) {
+      can.show = true;
+      console.log(can);
+    }
+    vm.closeCanInfo = function(can) {
+      can.show = false;
+    }
+
   }
 }());

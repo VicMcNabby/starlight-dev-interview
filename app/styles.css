@@ -21,8 +21,33 @@
   background: #fff;
 }
 
+.can-headers {
+  font-size: 14px;
+}
+
 .date {
   font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.canInfo {
+  display: none;
+  left: 25%;
+  margin-top: -30%;
+  width: 50%;
+  position: absolute;
+  z-index: 9;
+}
+
+.can-map {
+  width: 265px;
+  box-shadow: 1px 1px 2px #555;
+  margin: 1px auto;
+}
+
+.can-body {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 500px) {
@@ -31,5 +56,10 @@
   }
   .cans-data {
     min-width: 95%;
+  }
+  .canInfo {
+    width: 90%;
+    left: 5%;
+    margin-top: -65%;
   }
 }

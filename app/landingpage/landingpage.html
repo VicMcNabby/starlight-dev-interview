@@ -20,21 +20,49 @@
   </div>
   <div class="cans-data" ng-repeat="can in $ctrl.cans | orderBy:sortBy | filter:search">
     <p>
-      Name: {{can.name}}
+      <strong class="can-headers">Name:</strong> {{can.name}}
     </p>
     <p>
-      Serial: {{can.serial}}
+      <strong class="can-headers">Serial:</strong> {{can.serial}}
     </p>
     <p>
-      Size: {{can.size}}
+      <strong class="can-headers">Size:</strong> {{can.size}}
     </p>
     <p>
-      Created Date: <span class="date"> {{can.createdDate}} </span>
+      <strong class="can-headers">Created Date:</strong> <span class="date"> {{can.createdDate}} </span>
     </p>
     <p>
-      Modified Date: <span class="date"> {{can.modifiedDate}} </span>
+      <strong class="can-headers">Modified Date:</strong> <span class="date"> {{can.modifiedDate}} </span>
     </p>
+    <button class="btn btn-primary" ng-click="$ctrl.getInfo(can)">Get Location</button>
+
+
+
+    <div class="canInfo" ng-class="{show: can.show}">
+      <div class="canInfo-body modal-content">
+        <div class="modal-header">
+          <button type="button" class="close closeButton" ng-click="$ctrl.closeCanInfo(can)">X</button>
+          <h3>Location Info</h3>
+        </div>
+        <div class="modal-body can-body">
+          <p>
+            <strong class="can-headers">Name:</strong> {{can.name}}
+          </p>
+          <p>
+            <strong class="can-headers">Serial:</strong> {{can.serial}}
+          </p>
+          <p>
+            Type: {{can.location.type}}
+          </p>
+          <p>
+            {{can.location.name}}
+          </p>
+          <img class="can-map" src="http://maps.googleapis.com/maps/api/staticmap?center=39.7270307,-105.1902474&zoom=15&size=265x265&markers=39.7270307,-105.1902474" </div>
+        </div>
+      </div>
+
+
+    </div>
+
 
   </div>
-
-</div>
