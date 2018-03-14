@@ -1,5 +1,5 @@
 (function() {
   angular
-    .module('starlight', ['ui.router'])
+    .module('starlight', ['ui.router', 'duScroll'])
 
 }());
