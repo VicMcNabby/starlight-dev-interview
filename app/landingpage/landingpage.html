@@ -34,35 +34,34 @@
     <p>
       <strong class="can-headers">Modified Date:</strong> <span class="date"> {{can.modifiedDate}} </span>
     </p>
-    <button class="btn btn-primary" ng-click="$ctrl.getInfo(can)">Get Location</button>
+    <button class="btn location-button" ng-click="$ctrl.getInfo(can)">Get Location</button>
 
 
 
     <div class="canInfo" ng-class="{show: can.show}">
       <div class="canInfo-body modal-content">
         <div class="modal-header">
-          <button type="button" class="close closeButton" ng-click="$ctrl.closeCanInfo(can)">X</button>
-          <h3>Location Info</h3>
+          <button type="button" class="close" ng-click="$ctrl.closeCanInfo(can)">X</button>
+          <h3 class="location-header">{{can.name}} Location Info</h3>
         </div>
         <div class="modal-body can-body">
-          <p>
-            <strong class="can-headers">Name:</strong> {{can.name}}
-          </p>
           <p>
             <strong class="can-headers">Serial:</strong> {{can.serial}}
           </p>
           <p>
-            Type: {{can.location.type}}
+            <strong class="can-headers">Type:</strong> {{can.location.type}}
           </p>
           <p>
             {{can.location.name}}
           </p>
-          <img class="can-map" src="http://maps.googleapis.com/maps/api/staticmap?center=39.7270307,-105.1902474&zoom=15&size=265x265&markers=39.7270307,-105.1902474" </div>
+          <img class="can-map" src="http://maps.googleapis.com/maps/api/staticmap?center=39.7270307,-105.1902474&zoom=15&size=265x265&markers=39.7270307,-105.1902474" />
+          <button class="btn closeButton" ng-click="$ctrl.closeCanInfo(can)">close</button>
         </div>
       </div>
-
-
     </div>
 
 
   </div>
+
+
+</div>

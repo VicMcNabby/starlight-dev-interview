@@ -14,7 +14,7 @@
   text-align: center;
   margin: 10px;
   padding: 10px;
-  box-shadow: 1px 1px 4px #444;
+  box-shadow: 1px 1px 2px #777;
   border-radius: 2px;
   font-family: 'Raleway', sans-serif;
   min-width: 300px;
@@ -30,24 +30,62 @@
   font-weight: lighter;
 }
 
+.location-button {
+  background-color: rgba(14, 196, 163, 1);
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 1px 1px 2px #777;
+}
+
+.location-button:hover {
+  background-color: #145b39;
+  color: #fff;
+}
+
 .canInfo {
   display: none;
   left: 25%;
-  margin-top: -30%;
+  margin-top: -25%;
   width: 50%;
   position: absolute;
   z-index: 9;
+  border-radius: 2px;
+}
+
+.location-header {
+  font-family: 'Raleway', sans-serif;
+}
+
+.canInfo-body {
+  border-radius: 2px;
 }
 
 .can-map {
   width: 265px;
-  box-shadow: 1px 1px 2px #555;
+  box-shadow: 1px 1px 2px #777;
   margin: 1px auto;
 }
 
 .can-body {
   display: flex;
   flex-direction: column;
+}
+
+.closeButton {
+  padding: 2px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px #777;
+  background: #5f8487;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  width: 55%;
+  margin: 1px auto;
+  margin-top: 10px;
+}
+
+.closeButton:hover {
+  background: #1c3335;
+  color: #fff;
 }
 
 @media only screen and (max-width: 500px) {
