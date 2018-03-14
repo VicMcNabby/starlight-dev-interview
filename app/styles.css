@@ -5,6 +5,7 @@
 
 .search-box {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -22,4 +23,13 @@
 
 .date {
   font-family: sans-serif;
+}
+
+@media only screen and (max-width: 500px) {
+  .starlight-logo {
+    width: 75%;
+  }
+  .cans-data {
+    min-width: 95%;
+  }
 }
